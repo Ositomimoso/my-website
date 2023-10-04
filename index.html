@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jardin Osito Mimoso - El lugar ideal despues de casa</title>
+
+    <meta
+      name="description"
+      content="¡Bienvenidos a Osito Mimoso! Nuestra escuela infantil en Abasto, Capital Federal, se dedica al crecimiento y desarrollo integral de los niños. Ofrecemos un ambiente lleno de cariño y estímulo, adaptado a las necesidades e intereses únicos de cada pequeño. Únete a nuestro mundo de aprendizaje y diversión."
+    />
+    <meta
+      name="keywords"
+      content="Escuela Infantil Abasto, Capital Federal, Desarrollo Integral de Niños, Ambiente de Cariño y Estímulo, Aprendizaje y Diversión, Osito Mimoso"
+    />
+    <meta
+      property="og:image"
+      content="https://gleaming-dusk-1c484a.netlify.app/assets/images/carousel/1.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.8.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="icon" href="/assets/images/logo.ico" type="image/x-icon" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/tailwind.config.js"></script>
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/imagesCarousel.js"></script>
+    <script src="/assets/js/cardsInformation.js"></script>
+    <script src="/assets/js/animationsGsap.js"></script>
+    <script src="/assets/js/gallery.js"></script>
+    <script src="/assets/js/menu.js"></script>
+
+    <!-- <script src="/assets/js/gsap.js"></script> -->
+  </head>
+  <body class="bg-white min-h-[100vh]">
+    <h1 class="hidden">Escuela Infantil Osito mimoso</h1>
+    <div id="home">
+      <!-- Header -->
+      <header class="shadow-xl sticky top-0 z-20 bg-white">
+        <div
+          class="max-w-[1400px] relative mx-auto flex items-center justify-between py-4 px-4"
+        >
+          <img
+            src="/assets/images/logo.png"
+            alt="logo"
+            class="w-[110px]"
+            data-aos="fade-down"
+          />
+
+          <div class="grid place-items-center">
+            <i
+              class="fas fa-bars text-[30px] h-[40px] w-[40px] md:hidden"
+              id="hamburger-menu"
+            ></i>
+          </div>
+
+          <!-- Mobile Menu -->
+          <nav
+            id="nav-menu-mobile"
+            class="md:hidden absolute bg-white top-[106px] w-full -left-[100%] h-[100vh] transition-all duration-500"
+          >
+            <ul
+              class="flex flex-col gap-4 text-[50px] justify-center items-center"
+            >
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="50"
+                id="item-menu"
+              >
+                <a href="#home"> Inicio </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="100"
+                id="item-menu"
+              >
+                <a href="#about-us"> Nosotros </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="150"
+                id="item-menu"
+              >
+                <a href="#gallery"> Galeria </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="200"
+                id="item-menu"
+              >
+                <a href="#contact"> Contacto </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:block">
+            <ul class="flex gap-4">
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="50"
+              >
+                <a href="#home"> Inicio </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="100"
+              >
+                <a href="#about-us"> Nosotros </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="150"
+              >
+                <a href="#gallery"> Galeria </a>
+              </li>
+              <li
+                class="hover:text-pai-sky-strong"
+                data-aos="fade-down"
+                data-aos-delay="200"
+              >
+                <a href="#contact"> Contacto </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- START Carousel -->
+      <div
+        id="default-carousel"
+        class="z-0 relative w-full"
+        data-carousel="slide"
+      >
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden h-[40vw] rounded-lg xl:h-[80vh]">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/images/carousel/1.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/images/carousel/2.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/images/carousel/3.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img
+              src="/assets/images/carousel/4.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="..."
+            />
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div
+          class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+        >
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+        <!-- Slider controls -->
+        <button
+          type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next
+        >
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+          >
+            <svg
+              class="w-4 h-4 text-white dark:text-gray-800"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+      <!-- About -->
+      <section
+        class="px-2 max-w-[1400px] mx-auto text-gray-strong my-12 overflow-hidden"
+      >
+        <article
+          class="max-w-[630px] mx-auto my-8 text-center"
+          data-aos="fade-down"
+        >
+          <h2 class="text-[17px] title-style text-pai-sky-strong my-0">
+            Por que elegirnos?
+          </h2>
+          <h3 class="text-[40px] font-bold -mt-[15px]" id="about-us">
+            Te damos la bienvenida
+          </h3>
+          <p>
+            <strong>¡Escuela Infantil Osito Mimoso!</strong>
+            Nuestra adorable escuela, situada en Capital federal, Abasto. Nos
+            dedicamos a crear un ambiente cálido, lleno de afecto, contención y
+            favoreciendo el desarrollo integral, siempre atentos a las
+            necesidades e intereses únicos de cada alumno/a. En nuestra Escuela
+            infantil, nuestra principal misión es promover el crecimiento y
+            desarrollo integral de la niñez, integrales de los niños. <br />
+            <strong
+              >¡Bienvenidos a un mundo lleno de nuevas experiencias
+              cognitivas y ludicas!</strong
+            >
+          </p>
+          <img
+            id="bee"
+            class="w-fit relative -right-[163%]"
+            src="/assets/images/bee.webp"
+            alt="abejita"
+          />
+        </article>
+
+        <!-- Cards container -->
+        <section
+          id="card"
+          class="flex flex-wrap md:flex-nowrap justify-center md:justify-between gap-4 text-gray-strong"
+        ></section>
+
+        <!-- Lest contact -->
+        <section class="my-12">
+          <article class="my-4" data-aos="fade-right">
+            <h3 class="text-[25px] font-bold mt-4">
+              Querés <span class="text-pai-sky-strong">saber más?</span>
+            </h3>
+            <div class="-mt-[15px]">
+              <p
+                class="font-medium flex flex-col md:flex-row leading-8 gap-4 items-center"
+              >
+                Agenda una entrevista con nosotros
+                <a
+                  href="https://api.whatsapp.com/send?phone=5491159540925&text=Hola!%2C%20quisiera%20preguntar..."
+                  target="_blank"
+                  class="p-2 text-pai-pink-strong bg-pai-pink-strong text-white rounded-xl w-[150px] h-[50px] flex justify-center items-center"
+                  >Agendar</a
+                >
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- Our Vision and Mision -->
+      <section class="mt-12 bg-pai-sky-bold pt-12">
+        <div
+          class="max-w-[1400px] mx-auto flex flex-col md:flex-row p-4 justify-around items-center"
+          data-aos="zoom-in"
+        >
+          <div class="flex justify-center items-center">
+            <img src="/assets/images/mision/mision.png" alt="Maestra y niños" />
+          </div>
+          <article class="max-w-[575px]">
+            <div>
+              <!-- Intro text -->
+              <h3 class="text-[35px] font-bold mb-4 text-pai-sky-medium">
+                Hablemos de nuestra mision y visión
+              </h3>
+              <p class="text-[15px] text-white">
+                En nuestra Escuela Infantil Osito Mimoso, nuestra misión es
+                proporcionar un entorno seguro y enriquecedor donde los niños
+                puedan crecer, aprender y prosperar. Buscamos nutrir su
+                curiosidad, creatividad y valores, preparándolos para un futuro
+                lleno de éxito y felicidad.
+              </p>
+            </div>
+
+            <!-- Group mision and vision -->
+            <div class="flex justify-center items-center mt-4 gap-4">
+              <div class="flex-1">
+                <h3 class="font-bold text-[20px] text-pai-sky-medium">
+                  Nuestra vision
+                </h3>
+                <p class="text-[15px] font-medium text-white">
+                  Cultivamos un entorno donde los niños y niñas se sienten
+                  contenidos y valorados día a día.
+                </p>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-[20px] text-pai-sky-medium">
+                  Nuestra mision
+                </h3>
+                <p class="text-[15px] font-medium text-white">
+                  Fomentar el crecimiento integral de los niños y niñas a través
+                  del aprendizaje, el juego y los vínculos socio-afectivo.
+                </p>
+              </div>
+            </div>
+            <!-- Button -->
+            <a
+              href="https://api.whatsapp.com/send?phone=5491159540925&text=Hola!%2C%20quisiera%20preguntar..."
+              target="_blank"
+              class="p-2 mt-12 text-pai-pink-strong bg-pai-pink-strong text-white rounded-xl w-[150px] h-[50px] flex justify-center items-center"
+              >Conocer más</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-gray-strong p-4 text-white mb-4">
+        <div
+          class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-around items-center"
+        >
+          <article data-aos="fade-down">
+            <h3 class="text-[24px] font-bold">Coordina una entrevista</h3>
+            <p>
+              Te invitamos a explorar de cerca nuestra dinámica diaria en Osito
+              Mimoso. <br />
+              Descubrí más acerca de nuestras actividades diarias.
+            </p>
+          </article>
+          <!-- Button -->
+          <a
+            href="https://api.whatsapp.com/send?phone=5491159540925&text=Hola!%2C%20quisiera%20preguntar..."
+            target="_blank"
+            class="p-2 text-pai-pink-strong bg-pai-pink-strong text-white rounded-xl w-[150px] h-[50px] flex justify-center items-center"
+            >Pedir una reunion</a
+          >
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="bg-white max-w-[1400px] mx-auto mt-12">
+        <article id="gallery">
+          <div
+            id="container-images-gallery"
+            class="flex gap-2 flex-wrap justify-center"
+          ></div>
+        </article>
+        <article class="overflow-hidden mt-12">
+          <div class="slider">
+            <div class="slide-track gap-2"></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="shadow-xl bg-pai-sky-bold text-white p-8 mt-12 text-gray-strong"
+      >
+        <div
+          class="max-w-[1400px] mx-auto flex flex-col md:flex-row items-start justify-center md:justify-between py-4 px-4"
+        >
+          <div class="flex self-center justify-center items-center flex-col">
+            <img
+              src="/assets/images/logo.png"
+              alt="logo"
+              class="w-[110px] self-center"
+            />
+            <p>El lugar ideal despues de casa</p>
+          </div>
+
+          <div>
+            <h3 class="text-[25px] font-bold text-pai-sky-medium">
+              Redes sociales
+            </h3>
+            <ul class="flex flex-col gap-2 mt-2" id="contact">
+              <li>
+                <h4>
+                  <a
+                    href="https://www.instagram.com/escuelainfantil.ositomimoso/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram"></i>
+                    @escuelainfantil.ositomimoso
+                  </a>
+                </h4>
+              </li>
+              <li>
+                <h4>
+                  <a
+                    href="https://www.facebook.com/escuelainfantilositomimoso/?locale=es_LA"
+                    target="_blank"
+                  >
+                    <i class="fab fa-facebook-square"></i>
+                    /EscuelaInfantilOsitoMimoso
+                  </a>
+                </h4>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-[25px] font-bold text-pai-sky-medium">
+              Actividades
+            </h3>
+            <ul class="flex flex-col gap-2 mt-2">
+              <li><i class="fas fa-shapes"></i> Salón multisensorial</li>
+              <li><i class="fas fa-running"></i> Expresión corporal</li>
+              <li><i class="fas fa-book"></i> Musica</li>
+              <li><i class="fas fa-paint-brush"></i> Yoga</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-[25px] font-bold text-pai-sky-medium">
+              Contactanos
+            </h3>
+            <ul class="flex flex-col gap-2 mt-2">
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5491159540925&text=Hola!%2C%20quisiera%20preguntar..."
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-whatsapp"></i> 1159540925</a
+                >
+              </li>
+              <li><i class="fas fa-phone-volume"></i> 011 4872-5474</li>
+
+              <li>
+                <i class="fas fa-envelope-open"></i>
+                jardinositomimoso@hotmail.com
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Agüero 508, Buenos Aires,
+                Argentina
+              </li>
+              <li><i class="fas fa-clock"></i> Lun - Vie (7.30am - 17.30pm)</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <h4
+        class="p-1 flex justify-center items-center text-black bg-black text-white"
+      >
+        &copy; 2023 Escuela Infantil Osito Mimoso. Desarrollado por
+        <a href="https://www.jnsolutions.com.ar/" target="_blank">
+          <strong class="underline underline-offset-1"
+            >&nbsp;JNSolutions</strong
+          >
+        </a>
+      </h4>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
